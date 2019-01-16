@@ -1,0 +1,39 @@
+{
+  "generator-jhipster": {
+    "applicationType": "monolith",
+    "gitCompany": "",
+    "baseName": "peoplecounter",
+    "packageName": "io.github.jhipster.application",
+    "packageFolder": "io/github/jhipster/application",
+    "serverPort": 8080,
+    "serviceDiscoveryType": false,
+    "authenticationType": "jwt",
+    "uaaBaseName": "../uaa",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "enableSwaggerCodegen": false,
+    "messageBroker": false,
+    "buildTool": "maven",
+    "useSass": false,
+    "clientPackageManager": "npm",
+    "testFrameworks": [],
+    "enableTranslation": false,
+    "nativeLanguage": "en",
+    "languages": [
+      "en"
+    ],
+    "clientFramework": "angularX",
+    "jhiPrefix": "jhi",
+    "jhipsterVersion": "5.7.2",
+    "jwtSecretKey": "NGZhMjRlYTk4MmUzNGMwOGNlMjQ2ZDJiOWY3Yjg5YWQ4OGY0NmVmYjhkNmNiNDg2YzAyOTE0NjFiMTMxMjQwNTNjNGMwMjdiMmNjYjUzYzk0Mzc4NzVlYWJkMTc1MWEwYzY3M2U4MjBiMTViNzkwZTU1Mjc5YjVlYTQ5ZWJjNzk=",
+    "otherModules": []
+  },
+  "git-provider": "GitHub",
+  "git-company": "3123f23fr2323f23f",
+  "repository-name": "people-counter"
+}
