@@ -1,0 +1,34 @@
+{
+    "name": "CheckInCount",
+    "fields": [
+        {
+            "fieldName": "personIn",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "personout",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "countDate",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipName": "store",
+            "otherEntityName": "store",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190116084501",
+    "entityTableName": "check_in_count",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

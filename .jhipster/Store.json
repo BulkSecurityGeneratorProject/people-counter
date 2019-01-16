@@ -1,0 +1,40 @@
+{
+    "name": "Store",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 250
+        },
+        {
+            "fieldName": "address",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 250
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "checkInCount",
+            "otherEntityName": "checkInCount",
+            "otherEntityRelationshipName": "store"
+        }
+    ],
+    "changelogDate": "20190116084500",
+    "entityTableName": "store",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

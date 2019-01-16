@@ -1,0 +1,64 @@
+<div>
+    <h2 id="page-heading">
+        <span>Check In Counts</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-check-in-count" [routerLink]="['/check-in-count/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span >
+            Create new Check In Count
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="table-responsive" *ngIf="checkInCounts">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span>ID</span></th>
+            <th><span>Person In</span></th>
+            <th><span>Personout</span></th>
+            <th><span>Count Date</span></th>
+            <th><span>Store</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let checkInCount of checkInCounts ;trackBy: trackId">
+                <td><a [routerLink]="['/check-in-count', checkInCount.id, 'view' ]">{{checkInCount.id}}</a></td>
+                <td>{{checkInCount.personIn}}</td>
+                <td>{{checkInCount.personout}}</td>
+                <td>{{checkInCount.countDate | date:'medium'}}</td>
+                <td>
+                    <div *ngIf="checkInCount.store">
+                        <a [routerLink]="['../store', checkInCount.store?.id, 'view' ]" >{{checkInCount.store?.id}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['/check-in-count', checkInCount.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/check-in-count', checkInCount.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'check-in-count/'+ checkInCount.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
